@@ -17,5 +17,7 @@ int main(void)
     
     int minimum = find_min(numbers, size);
     printf("The smallest number is: %d\n", minimum);
+
+    reverse_string(str);
     
 }

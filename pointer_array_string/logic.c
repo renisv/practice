@@ -43,3 +43,20 @@ int find_min(int arr[], int size)
     
     return min;
 }
+
+void reverse_string(char *str) 
+{
+    if (str == NULL || *str == '\0') return;
+    
+    char *end = str;
+    for (; *end != '\0'; end++) {}
+    end--;
+    
+    for (char *start = str; start < end; start++, end--) 
+    {
+        char temp = *start;
+        *start = *end;
+        *end = temp;
+    }
+    printf("%s\n", str);
+}
