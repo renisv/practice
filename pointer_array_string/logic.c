@@ -60,3 +60,16 @@ void reverse_string(char *str)
     }
     printf("%s\n", str);
 }
+
+int *find_value(int *arr, int size, int target)
+{
+    int i;
+    int *ptr;
+    for (i = 0; i < size; i++)
+    if (arr[i] == target)
+        ptr = &arr[i];
+    else
+        ptr = NULL;
+    printf("%p\n", ptr);
+    return (ptr);
+}

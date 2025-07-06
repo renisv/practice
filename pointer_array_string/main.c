@@ -19,5 +19,7 @@ int main(void)
     printf("The smallest number is: %d\n", minimum);
 
     reverse_string(str);
+
+    find_value(numbers,size,34);
     
 }
