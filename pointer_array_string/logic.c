@@ -67,9 +67,7 @@ int *find_value(int *arr, int size, int target)
     int *ptr;
     for (i = 0; i < size; i++)
     if (arr[i] == target)
-        ptr = &arr[i];
-    else
-        ptr = NULL;
+        return &arr[i];
     printf("%p\n", ptr);
-    return (ptr);
+    return (NULL);
 }
