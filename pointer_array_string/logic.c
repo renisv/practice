@@ -64,10 +64,22 @@ void reverse_string(char *str)
 int *find_value(int *arr, int size, int target)
 {
     int i;
-    int *ptr;
     for (i = 0; i < size; i++)
     if (arr[i] == target)
         return &arr[i];
-    printf("%p\n", ptr);
     return (NULL);
+}
+
+int sumMatrix(int mat[][3], int rows)
+{
+    int i, j, matrixsum = 0;
+    
+    for (i = 0; i < rows; i++) 
+    {
+        for (j = 0; j < 3; j++) 
+        {
+        matrixsum += mat[i][j];
+        }
+    }
+    return matrixsum;
 }
