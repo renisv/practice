@@ -11,13 +11,23 @@ int main(void)
     // scanf("%d", &length);
     // printf("YOur password is %s\n", password_generator(length));
 
-    char *username = "renis***";
-    int result = validate_username(username);
+    // char *username = "renis***";
+    // int result = validate_username(username);
 
-    if (result == 0)
-        printf("Username must be longer than 5 characters and must not contain symbols, only numbers and letters\n");
-    else
-        printf("The username %s is valid.\n", username);
+    // if (result == 0)
+    //     printf("Username must be longer than 5 characters and must not contain symbols, only numbers and letters\n");
+    // else
+    //     printf("The username %s is valid.\n", username);
+
+    // char *str1 = "Renis ";
+    // char *str2 = "Vukaj";
+    // printf("%s\n", new_string(str1, str2));
+
+    // char example[] = "example";
+    // capitalize(example);
+
+    // char password[] = "#1";
+    // hide_password(password);
 
 }
 

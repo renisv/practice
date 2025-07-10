@@ -36,3 +36,30 @@ int validate_username(char *username)
     return (0);
 
 }
+
+
+char *new_string(char *prefix, char *name)
+{
+    char *concated_string = malloc(sizeof(char) * (strlen(prefix) + strlen(name)) + 1);
+    concated_string = strcat(concated_string, prefix);
+    concated_string = strcat(concated_string, name);
+    return (concated_string);
+
+}
+
+void capitalize(char *sentence)
+{
+    if (sentence[0] > 'a' && sentence[0] < 'z')
+        sentence[0] = sentence[0] - 32;
+    printf("%s\n", sentence);
+}
+
+
+
+void hide_password(char *password)
+{
+    int length = strlen(password);
+    for (int i = 0; i < length; i++)
+        printf("*");
+    printf("\n");
+}
