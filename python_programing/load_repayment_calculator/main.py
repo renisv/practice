@@ -25,21 +25,14 @@ def ask_to_continue():
 
 def main():
     display_welcome()
+    monthly, total = calculate_repayment()
     
-    try:
-        monthly, total = calculate_repayment()
-        
-        print("\n" + "=" * 50)
-        print("           CALCULATION RESULTS")
-        print("=" * 50)
-        print(f"Monthly Payment:     ${monthly:>10.2f}")
-        print(f"Total Amount Paid:   ${total:>10.2f}")
-        print("=" * 50)
-        
-    except KeyboardInterrupt:
-        print("\n\nProgram interrupted by user. Goodbye!")
-    except Exception as e:
-        print(f"\nAn error occurred: {e}")
+    print("\n" + "=" * 50)
+    print("           CALCULATION RESULTS")
+    print("=" * 50)
+    print(f"Monthly Payment:     ${monthly:>10.2f}")
+    print(f"Total Amount Paid:   ${total:>10.2f}")
+    print("=" * 50)
 
 if __name__ == "__main__":
     while True:
