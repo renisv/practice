@@ -24,13 +24,11 @@ def ask_to_continue():
             print("Please enter 'y' or 'n'.")
 
 def main():
-    """Main program function"""
     display_welcome()
     
     try:
         monthly, total = calculate_repayment()
         
-        # Simplified results display (only monthly and total)
         print("\n" + "=" * 50)
         print("           CALCULATION RESULTS")
         print("=" * 50)
