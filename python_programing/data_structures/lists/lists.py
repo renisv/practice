@@ -1,0 +1,10 @@
+grocery_list = []
+to_buy = input("What do we need to buy?\n")
+to_buy = to_buy.split(" ")
+grocery_list.extend(to_buy)
+print(grocery_list)
+print()
+print(f"we have already bought {grocery_list[1]}, lets remove it from the list\n")
+grocery_list.pop(1)
+grocery_list.sort()
+print(grocery_list)
