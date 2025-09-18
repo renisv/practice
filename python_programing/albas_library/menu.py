@@ -7,7 +7,7 @@ class LibraryMenu:
         self.initialize_sample_books()
     
     def initialize_sample_books(self):
-        # Add some sample books
+        
         books = [
             Book("Harry Potter", "J.K. Rowling", "9780439708180", 5, 4),
             Book("The Hobbit", "J.R.R. Tolkien", "9780547928227", 4, 2),
