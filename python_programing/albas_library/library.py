@@ -7,7 +7,11 @@ class Library:
     @property
     def book_list(self):
         return self.__book_list
-    
+
+    @book_list.setter
+    def book_list(self,value):
+        book_list = book_list.append(value)
+
     def print_books(self):
         for book in self.book_list:
             print(book)
@@ -53,4 +57,9 @@ class Library:
             book.available_copies += 1
         return book.available_copies
         
+    def sort_by_author(self):
+        return sorted(self.book_list, key=lambda book: book.author)
+
+    def sort_by_title(self):
+        return sorted(self.book_list, key=lambda book: book.title)
     
