@@ -1,4 +1,7 @@
 class Book:
+
+    number_of_objects = 0
+
     def __init__(self, title, author, ISBN, total_copies, available_copies):
 
         self.title = title
@@ -6,6 +9,7 @@ class Book:
         self.ISBN = ISBN
         self.total_copies = total_copies
         self.available_copies = available_copies
+        Book.number_of_objects += 1
 
     @property
     def title(self):
@@ -69,5 +73,18 @@ class Book:
             raise ValueError("Available copies cannot be more than total copies")
         self.__available_copies = value
 
+    @classmethod
+    def object_count(cls):
+        return cls.number_of_objects
+
     def __str__(self):
         return f"Book title: {self.title}, Author: {self.author}"
+
+    def __dict__(self):
+        return {
+            "Title": self.title,
+            "Author": self.author,
+            "ISBN": self.ISBN,
+            "Total copies": self.total_copies,
+            "Available copies": self.available_copies
+        }
