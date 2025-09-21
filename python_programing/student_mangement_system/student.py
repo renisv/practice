@@ -4,13 +4,16 @@ class Student:
         self.__name = name
         self.__grades = []
 
-    def get_id(self):
+    @property
+    def id(self):
         return self.__id
     
-    def get_name(self):
+    @property
+    def name(self):
         return self.__name
     
-    def get_grades(self):
+    @property
+    def grades(self):
         return self.__grades
 
     def add_grade(self, grade):

@@ -12,16 +12,12 @@ def add_new_student(students, student_id, name):
     students.append(new_student)
     return new_student
 
-
-
 def delete_student_by_id(students, student_id):
     student = search_student_by_id(students, student_id)
     if student is None:
         raise ValueError(f"Student with ID {student_id} not found") 
     students.remove(student)
     return student
-
-
 
 def delete_student_by_name(students, name):
     student = search_student_by_name(students, name)
